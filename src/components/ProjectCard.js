@@ -1,17 +1,32 @@
 import React, { useState } from 'react';
+import "./style.css";
 
 const ProjectCard = (props) => {
+
+    const {imageLink, title, description, technologies, mobile} = props;
+
     return ( 
-        <div className="card mb-4 shadow-sm">
-            <img className="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"/>
+        <div className="card mb-4 shadow-sm text-center">
+            <div className="row justify-content-center">
+                <div className="col text-center">
+                    <img className={mobile ? "card-img-mobile" : "card-img"} src={imageLink} alt={title}/>
+                </div>
+            </div>
+            
             <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
+                <p className="title">{title}</p>
+                <p className="card-text description">{description}</p>
+                <div className="row my-2">
+                    <div className="col d-flex justify-content-center align-items-center">
+                        <small className="text-muted">{technologies}</small>
+                    </div>
+                </div>
+                <div className="row my-2 align-items-center">
+                    <div className="col btn-group">
                         <button type="button" className="btn btn-sm btn-outline-secondary">More Info</button>
                     </div>
-                    <small className="text-muted">9 mins</small>
                 </div>
+                
             </div>
         </div>
      );

@@ -12,3 +12,27 @@
     background-color: #303030;
     color: white;
 }
+
+.title{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.description{
+    font-size: large;
+    height: 70px;
+}
+
+.card{
+    height: 600px;
+}
+
+.card-img{
+    height: 350px;
+}
+
+.card-img-mobile{
+    height: 350px;
+    width: 200px;
+    margin: 0;
+}
