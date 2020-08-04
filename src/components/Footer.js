@@ -1,6 +1,7 @@
 import React from 'react';
 import githubImage from '../images/GitHub_Logo.png';
 import linkedInImage from '../images/LI-Logo.png';
+import './style.css'
 
 const Footer = (props) => {
     return ( 
