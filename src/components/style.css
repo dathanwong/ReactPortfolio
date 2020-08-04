@@ -1,0 +1,14 @@
+.links{
+    height: 30px;
+}
+
+.filter{
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+}
+
+.jumbotron{
+    background-color: #303030;
+    color: white;
+}
