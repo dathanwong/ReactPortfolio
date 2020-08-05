@@ -7,6 +7,8 @@ const ProjectCard = (props) => {
 
     const [isExpanded, setIsExpanded] = useState(false);
 
+
+
     return ( 
         <div className={isExpanded ? "card-expanded mb-4 shadow-sm text-center" : "card mb-4 shadow-sm text-center"}>
             <div className="row justify-content-center">

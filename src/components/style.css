@@ -30,27 +30,42 @@
 
 .card{
     height: 650px;
+    transition: height 0.4s linear;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .card-expanded{
     height: 1300px;
+    transition: height 0.4s linear;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 @media(max-width: 850px){
     .card-expanded{
         height: 1600px;
+        transition: height 0.4s linear;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
 }
 
 @media(max-width: 670px){
     .card-expanded{
         height: 1700px;
+        transition: height 0.4s linear;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
 }
 
 @media(max-width: 670px){
     .card-expanded{
         height: 1800px;
+        transition: height 0.4s linear;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
 }
 
