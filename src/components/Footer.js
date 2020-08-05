@@ -7,7 +7,7 @@ const Footer = (props) => {
     return ( 
         <footer className="text-muted">
                 <p className="float-right">
-                <a href="#">Back to top</a>
+                <a href="/#">Back to top</a>
                 </p>
                 <div className="container text-center">
                     <a href="https://github.com/dathanwong"><img className="links" src={githubImage} alt="Github Link"/></a>
