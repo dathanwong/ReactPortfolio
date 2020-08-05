@@ -8,7 +8,7 @@ const ProjectCard = (props) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return ( 
-        <div className="card mb-4 shadow-sm text-center" style={isExpanded ? {height:"1300px"} : {height:"650px"}}>
+        <div className={isExpanded ? "card-expanded mb-4 shadow-sm text-center" : "card mb-4 shadow-sm text-center"}>
             <div className="row justify-content-center">
                 <div className="col text-center">
                     <img className={mobile ? "card-img-mobile" : "card-img"} src={imageLink} alt={title}/>

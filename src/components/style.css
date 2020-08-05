@@ -29,7 +29,29 @@
 }
 
 .card{
-    height: 1000px;
+    height: 650px;
+}
+
+.card-expanded{
+    height: 1300px;
+}
+
+@media(max-width: 850px){
+    .card-expanded{
+        height: 1600px;
+    }
+}
+
+@media(max-width: 670px){
+    .card-expanded{
+        height: 1700px;
+    }
+}
+
+@media(max-width: 670px){
+    .card-expanded{
+        height: 1800px;
+    }
 }
 
 .card-img{
