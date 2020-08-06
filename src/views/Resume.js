@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Document, Page, pdfjs } from "react-pdf";
 import MyResume from '../images/DathanWongResume.pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import '../components/style.css';
 
 const Resume = (props) => {
-    const [numPages, setNumPages] = useState(2);
-    const [pageNumber, setPageNumber] = useState(1);
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-
-    function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    }
    
     function removeTextLayerOffset() {
         const textLayers = document.querySelectorAll(".react-pdf__Page__textContent");
@@ -39,7 +33,7 @@ const Resume = (props) => {
             <div className=" col-sm-12 col-md-10 col-lg-10 col-xl-6 text-xl-left">
             <Document
                 file={MyResume}
-                onLoadSuccess={onDocumentLoadSuccess}
+                onLoadSuccess={removeTextLayerOffset}
             >
                 <Page pageNumber={2} 
                 renderTextLayer={false}/>
