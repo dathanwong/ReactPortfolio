@@ -11,18 +11,20 @@ const Main = (props) => {
     const [selected, setSelected] = useState("projects");
 
     return (
-        <div className="whole-container">
+        <>
             <Header selected={selected} setSelected={setSelected} />
             <div className="content-area">
+                <div className="container-fluid">
                 {
                     selected === "projects" && <Projects/>
                 }
                 {
                     selected === "resume" && <Resume/>
                 }
+                </div>
             </div>
             <Footer/>
-        </div>
+        </>
      );
 }
  
