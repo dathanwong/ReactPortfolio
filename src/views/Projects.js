@@ -7,6 +7,7 @@ import VacationTracker from '../images/VacationTracker.gif';
 import RestaurantRoulette from '../images/RestaurantRoulette.gif';
 import WorkoutTracker from '../images/WorkoutTracker.gif';
 import ProjectCard from '../components/ProjectCard';
+import MeetMeInTheMiddle from '../images/MeetMeInTheMiddle.gif';
 
 const Projects = (props) => {
     return (
@@ -46,6 +47,19 @@ const Projects = (props) => {
                 />
             </div>
             <div className="col-sm-10 col-md-10 col-lg-6 col-xl-5">
+                <ProjectCard id="8" title="Meet Me In the Middle" mobile={false} imageLink={MeetMeInTheMiddle} 
+                    description="Let's meet somewhere in the middle!" 
+                    technologies="React, JavaScript, Google APIs, Express, Node, HTML, CSS" 
+                    inspiration="I have a golfing buddy who lives in Anaheim when I live in Los Angeles so it is about an hour and half drive with no traffic. We wanted to find golf courses in between us so neither of us would have to drive too far but Google Maps doesn't have this functionality built in so I decided to write my own web app to help us find places to golf or just places in between where we could meet up." 
+                    challenges="I had to use multiple Google APIs since neither of them gave me all the information I needed. I had to grab data from the Google Places API, Distance Matrix API, and Geocoding API, then integrate all the results together. Pulling the data wasn't the most difficult part but processing the data to make sure I was getting relevant results was the primary challenge and required lots of backend code for my APIs."
+                    nextSteps="I want to improve the results gathering algorithm. The algorithm works great for points of interest that don't have a lot of locations like golf courses but things like restaurants or bars do not work well. This is because the Google Places API will only give me 60 results so I don't always get results that are the right distance from both addresses. My next steps would be to try and pull more results or cache results so that I can generate a more accurate map of potential locations." 
+                    collaborators="None"
+                    links={<a href="https://github.com/dathanwong/MeetMeInTheMiddle">GitHub Repo</a>}    
+                />
+            </div>         
+        </div>
+        <div className="row justify-content-center">
+            <div className="col-sm-10 col-md-10 col-lg-6 col-xl-5">
                 <ProjectCard id="4" title="Food Dropoff" imageLink={FoodDropoff} 
                     description="Help restaurants organize food drop off events during Covid-19" 
                     technologies="Python, Django, HTML, CSS, JavaScript, Ajax, Bootstrap, SQL, BCrypt" 
@@ -54,30 +68,28 @@ const Projects = (props) => {
                     nextSteps="I really wanted to push this website live and reach out to some restaurants in the area to see if they were interested but unfortunately just never found the time while doing the coding bootcamp. I still think the idea is really great but maybe would be more useful as a mobile app so I may explore that." 
                     collaborators={<p><a href="https://www.linkedin.com/in/ben-jensen-68b62940/">Ben Jensen</a>, <a href="https://www.linkedin.com/in/jkoopub/">Jayoung K</a></p>} 
                     links={<a href="https://github.com/Dojo-DjangoProject/Food_Dropoff">GitHub Repo</a>} />
-            </div>            
-        </div>
-        <div className="row justify-content-center">
+            </div>   
             <div className="col-sm-10 col-md-10 col-lg-6 col-xl-5">
                 <ProjectCard id="5" title="Vacation Days Tracker" imageLink={VacationTracker} 
-                description="Help employees keep track of their vacation balances accounting for future days off" 
-                technologies="JavaScript, HTML, CSS, JQuery" 
-                inspiration="I love to travel and I was lucky at Microsoft that they have great benefits and vacation time policy. The problem I would run into though was I never knew if I had enough vacation days to go on a trip I was planning. We had an internal tool to check our current balance but it would not tell us our balance in the future and would not account for our future plans. I had a lot of coworkers that would use Excel but I decided to create a web application that would hopefully do a better job." 
-                challenges="Dates are a huge hassle for any programming language and since my entire app was based on dates and times this was much more challenging than I anticipated. Especially working with JavaScript where there is no type safety I had to do lots of date conversions from readable strings to Unix time while also trying to perform operations on both." 
-                nextSteps="The current iteration doesn't have too much customization and does not have a backend database since I had not learned this yet when I started the project. I would definitely add in a database to store the vacation data instead of calculating it each time the page loads and would also add in additional inputs so the user can customize their vacation accrual rate and accrual dates." 
-                collaborators="None" 
-                links={<a href="https://github.com/dathanwong/VacationDaysTrackerHTML">GitHub Repo</a>}/>
-            </div>
-            <div className="col-sm-10 col-md-10 col-lg-6 col-xl-5">
-                <ProjectCard id="6" title="Super Simple Workout Tracker" imageLink={WorkoutTracker} mobile={true} 
-                description="Keep track of your weight lifting progress with a super simple interface" 
-                technologies="Xamarin, Xamarin.Forms, C#, SQLite" 
-                inspiration="I try to go to the gym every day, which usually turns more into every other day if not longer, but I would always forget how much weight I lifted the time before. I wanted something to track my weight lifting progress and there are tons of apps out there that do this but they all had a lot of extra features I didn't need. I really just wanted something that showed me my previous weight lifted and previous reps. Being a problem solver/developer I decided to write my own using Xamarin.Forms so I could use it on all my devices and share it with friends." 
-                challenges="At the time Xamarin.Forms was new to me which was a challenge to learn but I was also just inexperienced as a developer. This was one of my first full coding projects so there were a lot of growing pains looking at documentation and learning different syntax." nextSteps="If I was to take this further I would add in some graphs for users to see how much they have progressed over time. Other than that I'm not too sure since I have been using this app since I made it and works great at what it does." 
-                collaborators="None" 
-                links={<><a href="https://github.com/dathanwong/WorkoutTracker">GitHub Repo</a><a href="https://play.google.com/store/apps/details?id=com.companyname.WorkoutTracker">, Google Play Store</a></>}/>
+                    description="Help employees keep track of their vacation balances accounting for future days off" 
+                    technologies="JavaScript, HTML, CSS, JQuery" 
+                    inspiration="I love to travel and I was lucky at Microsoft that they have great benefits and vacation time policy. The problem I would run into though was I never knew if I had enough vacation days to go on a trip I was planning. We had an internal tool to check our current balance but it would not tell us our balance in the future and would not account for our future plans. I had a lot of coworkers that would use Excel but I decided to create a web application that would hopefully do a better job." 
+                    challenges="Dates are a huge hassle for any programming language and since my entire app was based on dates and times this was much more challenging than I anticipated. Especially working with JavaScript where there is no type safety I had to do lots of date conversions from readable strings to Unix time while also trying to perform operations on both." 
+                    nextSteps="The current iteration doesn't have too much customization and does not have a backend database since I had not learned this yet when I started the project. I would definitely add in a database to store the vacation data instead of calculating it each time the page loads and would also add in additional inputs so the user can customize their vacation accrual rate and accrual dates." 
+                    collaborators="None" 
+                    links={<a href="https://github.com/dathanwong/VacationDaysTrackerHTML">GitHub Repo</a>}/>
             </div>
         </div>
         <div className="row justify-content-center">
+            <div className="col-sm-10 col-md-10 col-lg-6 col-xl-5">
+                <ProjectCard id="6" title="Super Simple Workout Tracker" imageLink={WorkoutTracker} mobile={true} 
+                    description="Keep track of your weight lifting progress with a super simple interface" 
+                    technologies="Xamarin, Xamarin.Forms, C#, SQLite" 
+                    inspiration="I try to go to the gym every day, which usually turns more into every other day if not longer, but I would always forget how much weight I lifted the time before. I wanted something to track my weight lifting progress and there are tons of apps out there that do this but they all had a lot of extra features I didn't need. I really just wanted something that showed me my previous weight lifted and previous reps. Being a problem solver/developer I decided to write my own using Xamarin.Forms so I could use it on all my devices and share it with friends." 
+                    challenges="At the time Xamarin.Forms was new to me which was a challenge to learn but I was also just inexperienced as a developer. This was one of my first full coding projects so there were a lot of growing pains looking at documentation and learning different syntax." nextSteps="If I was to take this further I would add in some graphs for users to see how much they have progressed over time. Other than that I'm not too sure since I have been using this app since I made it and works great at what it does." 
+                    collaborators="None" 
+                    links={<><a href="https://github.com/dathanwong/WorkoutTracker">GitHub Repo</a><a href="https://play.google.com/store/apps/details?id=com.companyname.WorkoutTracker">, Google Play Store</a></>}/>
+            </div>
             <div className="col-sm-10 col-md-10 col-lg-6 col-xl-5">
                 <ProjectCard id="7" title="SolBox" imageLink={SolBox} 
                     description={<span>Bluetooth speaker with UV monitoring to improve skin health awareness. Winner of the <a href="https://www.hackster.io/contests/2019chinausyoungmakercompetition">Hackster 2019 US China Young Makers Competition Grand Prize</a>.</span> } 
